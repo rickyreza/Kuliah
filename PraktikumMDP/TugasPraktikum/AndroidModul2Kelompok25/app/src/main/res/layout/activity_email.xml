@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Email">
+
+    <EditText
+        android:id="@+id/editTextTo"
+        android:layout_width="310dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="60dp"
+        android:hint="to"
+        app:layout_constraintEnd_toEndOf="@+id/editTextSbj"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/editTextSbj"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextSbj"
+        android:layout_width="313dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="32dp"
+        android:hint="Subjek"
+        app:layout_constraintEnd_toEndOf="@+id/editTextMsg"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="@+id/editTextMsg"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTo" />
+
+    <EditText
+        android:id="@+id/editTextMsg"
+        android:layout_width="319dp"
+        android:layout_height="172dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="8dp"
+        android:hint="Message"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.612"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextSbj" />
+
+    <Button
+        android:id="@+id/buttonSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Send"
+        android:background="@drawable/roundedbutton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextMsg" />
+</android.support.constraint.ConstraintLayout>
