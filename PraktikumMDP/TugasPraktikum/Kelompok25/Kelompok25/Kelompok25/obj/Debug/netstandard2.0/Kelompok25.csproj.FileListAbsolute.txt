@@ -1,0 +1,13 @@
+F:\Test\Kelompok25\Kelompok25\Kelompok25\bin\Debug\netstandard2.0\Kelompok25.deps.json
+F:\Test\Kelompok25\Kelompok25\Kelompok25\bin\Debug\netstandard2.0\Kelompok25.dll
+F:\Test\Kelompok25\Kelompok25\Kelompok25\bin\Debug\netstandard2.0\Kelompok25.pdb
+F:\Test\Kelompok25\Kelompok25\Kelompok25\obj\Debug\netstandard2.0\Kelompok25.csprojAssemblyReference.cache
+F:\Test\Kelompok25\Kelompok25\Kelompok25\obj\Debug\netstandard2.0\Kelompok25.csproj.CoreCompileInputs.cache
+F:\Test\Kelompok25\Kelompok25\Kelompok25\obj\Debug\netstandard2.0\Kelompok25.AssemblyInfoInputs.cache
+F:\Test\Kelompok25\Kelompok25\Kelompok25\obj\Debug\netstandard2.0\Kelompok25.AssemblyInfo.cs
+F:\Test\Kelompok25\Kelompok25\Kelompok25\obj\Debug\netstandard2.0\Kelompok25.dll
+F:\Test\Kelompok25\Kelompok25\Kelompok25\obj\Debug\netstandard2.0\Kelompok25.pdb
+F:\Test\Kelompok25\Kelompok25\Kelompok25\obj\Debug\netstandard2.0\Kelompok25.App.xaml.g.cs
+F:\Test\Kelompok25\Kelompok25\Kelompok25\obj\Debug\netstandard2.0\Kelompok25.LoginPage.xaml.g.cs
+F:\Test\Kelompok25\Kelompok25\Kelompok25\obj\Debug\netstandard2.0\Kelompok25.MainPage.xaml.g.cs
+F:\Test\Kelompok25\Kelompok25\Kelompok25\obj\Debug\netstandard2.0\Kelompok25.SignUpPage.xaml.g.cs
