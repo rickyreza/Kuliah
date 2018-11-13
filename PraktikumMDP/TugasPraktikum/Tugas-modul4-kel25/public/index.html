@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Modul PWA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="icon/192.ico" type="image/x-icon" />
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/7/75/Lambang_Kabupaten_Kapuas.png" sizes="32x32" />
+    <link rel="manifest" href="manifest.json">
+    <!-- buat manifest json -->
+</head>
+<body>
+
+<!-- untuk program utama -->
+<div class="container-fluid">
+</div><div id="app" >
+    
+    <center>
+    <div>
+        
+    </div>
+    <div class="card bg-warning mb-3">
+        <div class="card-body">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/75/Lambang_Kabupaten_Kapuas.png" 
+            style="width:30%" class="card-img-top" alt="">
+            <br><br>
+            <h5 class="card-title">Daftar Kode POS Kapuas</h5>
+            <p class="card-text">Berikut adalah semua kode pos yang ada di Kab. Kapuas</p>
+            <p>Kurang lebih datanya ada {{kodepos.length}}</p>
+            <a href="#" v-on:click="lihat = !lihat" v-show="true" class="btn btn-primary">Tentang</a>
+            <a href="#" v-on:click="tampil = !tampil " v-show="true" class="btn btn-primary">Tampilkan</a>
+        </div>
+    </div>
+    <div v-show="!tampil">
+        <div class="row">
+            <div class="col-sm-4 col-md-4 col-lg-4 col-4">
+                <button class="btn btn-primary btn-sm" v-show="awal>0" v-on:click="prev()">Balek Wae</button>
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-4 col-4">
+                <span>Halaman : {{halaman}}</span>
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-4 col-4">
+                <button class="btn btn-primary btn-sm" v-show="akhir <= kodepos.length" v-on:click="next()">Lanjooot</button>
+            </div>
+        </div>
+        <div class="row"style="margin:20px">
+            <div class="col-sm-3"></div>
+            <div class=col-sm-6">
+            <input type="text" v-model="search" class="form-control" placeholder="Pencarian berdasarkan Kecamatan">
+            </div>
+        </div>
+    </div>
+    </center>
+    <div v-show="!tampil" class="table-responsive container">
+        <table id="example" class="table table-hover table-bordered">
+            <tr>
+                <th>Kecamatan</th>
+                <th>Kelurahan</th>
+                <th>Kode POS</th>
+            </tr>
+            <tr v-for="pos in cari.slice(awal,akhir)">
+                <td style="width:40%">{{pos.kecamatan}}</td>
+                <td style="width:40%">{{pos.kelurahan}}</td>
+                <td style="width:20%">{{pos.kodepos}}</td>
+            </tr>
+        </table>
+    </div>        
+    <div v-show="!lihat" >
+        <center>
+                <p style="text-align: center;"><img src="https://cdn.pbrd.co/images/HLMsv6C.png" width="266" height="300"  /></p>
+                <p style="text-align: center;">Muhammad Ricky Reza</p>
+                <p style="text-align: center;">21120112140027</p>
+        </center>
+    </div>
+</div>
+</body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="app.js"></script>
+    <script src="sw.js"></script>
+    <!-- untuk service worker -->
+
+</html>

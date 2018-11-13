@@ -1,0 +1,17 @@
+{
+    "name": "tugas-modul4-kel25",
+    "version": "1.0.0",
+    "description": "Tugas PWA 1",
+    "main": "index.js",
+    "scripts": {
+        "start": "http-server -c-1 -p 8888"
+    },
+    "keywords": [
+        "pwa"
+    ],
+    "author": "Muhammad Ricky Reza",
+    "license": "UNLICENSED",
+    "devDependencies": {
+        "http-server": "^0.10.0"
+    }
+}
