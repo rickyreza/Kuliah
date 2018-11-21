@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>JSF RSBK</title>
+        <h:outputStylesheet library="css" name="mainStyle.css"/>
+        
+    </h:head>
+    <h:body>
+        <center>
+             <h2>Tambah Data Dokter</h2>
+             
+            <h:form>
+            <table>
+            <tr>
+               <td>NID :</td>
+               <td><h:inputText value="#{dokterDanPasien.NID}" required="true"></h:inputText></td>
+            </tr>
+            <tr>
+               <td>Nama Dokter :</td>
+               <td><h:inputText value="#{dokterDanPasien.namaDokter}" required="true"></h:inputText></td>
+            </tr>
+            <tr>
+               <td>Spesialis :</td>
+               <td><h:inputText value="#{dokterDanPasien.spesialis}" required="true"></h:inputText></td>
+            </tr>
+            </table>
+               
+             <h2>Tambah Data Pasien</h2>
+             
+            <h:form>
+            <table>
+            <tr>
+               <td>NIP :</td>
+               <td><h:inputText value="#{dokterDanPasien.NIP}" required="true"></h:inputText></td>
+            </tr>
+            <tr>
+               <td>Nama Pasien :</td>
+               <td><h:inputText value="#{dokterDanPasien.namaPasien}" required="true"></h:inputText></td>
+            </tr>
+            <tr>
+               <td>Jenis Penyakit :</td>
+               <td><h:inputText value="#{dokterDanPasien.jenisPenyakit}" required="true"></h:inputText></td>
+            </tr>
+            <tr>
+               <td>Penyakit :</td>
+               <td><h:inputText value="#{dokterDanPasien.penyakit}" required="true"></h:inputText></td>
+            </tr>
+            </table>
+                <br></br>
+                <h:commandButton value="Tambahkan" action="#{dokterDanPasien.tambah22nya()}">
+                </h:commandButton>
+              <br></br>
+              <br></br>
+            </h:form>
+                    <h:form>
+                      <h:commandButton value="Kembali" action="index.xhtml"></h:commandButton>
+                    </h:form>
+            </h:form>
+             
+        </center>
+                   
+    </h:body>
+</html>
+

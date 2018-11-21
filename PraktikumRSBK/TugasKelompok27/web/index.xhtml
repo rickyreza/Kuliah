@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>JSF RSBK</title>
+        <h:outputStylesheet library="css" name="mainStyle.css"/>
+        <h:outputScript library="js" name="mainJs.js"/>
+    </h:head>
+    <h:body>
+        <center>
+            <h2>Daftar Dokter dan Pasien di Rumah Sakit</h2>
+            <h:form>
+                <br></br>
+            
+                <h3>Daftar Dokter</h3>
+                <br></br>
+            
+                <h:dataTable value="#{dokterDanPasien.all_dokter}" var="ddokter" border ="1" width="800px">
+                
+                <h:column>
+                  <f:facet name="header">NID</f:facet>
+                  <h:outputText value="#{ddokter.NID}"></h:outputText>
+                </h:column>
+                <h:column>
+                  <f:facet name="header">Nama Dokter</f:facet>
+                  <h:outputText value="#{ddokter.namaDokter}"></h:outputText>
+                </h:column>
+                <h:column>
+                  <f:facet name="header">Spesialis</f:facet>
+                  <h:outputText value="#{ddokter.spesialis}"></h:outputText>
+                </h:column>
+                    <h:column>
+                    <f:facet name="header">Edit</f:facet>
+                    <h:commandButton value="Edit" action="#{dokterDanPasien.Edit_Dokter}">
+                      <f:param name="action" value="#{ddokter.NID}" />
+                    </h:commandButton>
+                  </h:column>
+                  <h:column>
+                    <f:facet name="header">Delete</f:facet>
+                    <h:commandButton value="Delete" action="#{dokterDanPasien.Delete_Dokter}">
+                      <f:param name="action" value="#{ddokter.NID}" />
+                    </h:commandButton>
+                  </h:column>
+                </h:dataTable>
+            </h:form>
+            <br></br>
+            <br></br>
+            <br></br>
+            <h:form>
+                <br></br>
+                <h3>Daftar Pasien</h3>
+                
+            <br></br>
+                <h:dataTable value="#{dokterDanPasien.all_pasien}" var="pasien" border ="1" width="800px">
+                    <h:column>
+                  <f:facet name="header">NIP</f:facet>
+                  <h:outputText value="#{pasien.NIP}"></h:outputText>
+                </h:column>
+                <h:column>
+                  <f:facet name="header">Nama Pasien</f:facet>
+                  <h:outputText value="#{pasien.namaPasien}"></h:outputText>
+                </h:column>
+                <h:column>
+                  <f:facet name="header">Jenis Penyakit</f:facet>
+                  <h:outputText value="#{pasien.jenisPenyakit}"></h:outputText>
+                </h:column>
+                <h:column>
+                  <f:facet name="header">Penyakit</f:facet>
+                  <h:outputText value="#{pasien.penyakit}"></h:outputText>
+                </h:column>
+                    <h:column>
+                    <f:facet name="header">Edit</f:facet>
+                    <h:commandButton value="Edit" action="#{dokterDanPasien.Edit_Pasien}">
+                      <f:param name="action" value="#{pasien.NIP}" />
+                    </h:commandButton>
+                  </h:column>
+                  <h:column>
+                    <f:facet name="header">Delete</f:facet>
+                    <h:commandButton value="Delete" action="#{dokterDanPasien.Delete_Pasien}">
+                      <f:param name="action" value="#{pasien.NIP}" />
+                    </h:commandButton>
+                  </h:column>
+                </h:dataTable>
+            </h:form>
+            <br></br>
+            <br></br>
+            <br></br>
+            <h:form>
+                <br></br>
+                <h3>Daftar Penyakit</h3>
+                <br></br>
+                <h:dataTable value="#{dokterDanPasien.all_dokter_dan_pasien}" var="dokter" border ="1" width="800px">
+                <h:column>
+                  <f:facet name="header">Jenis Penyakit</f:facet>
+                  <h:outputText value="#{dokter.jenisPenyakit}"></h:outputText>
+                </h:column>
+                <h:column>
+                  <f:facet name="header">Nama Dokter</f:facet>
+                  <h:outputText value="#{dokter.namaDokter}"></h:outputText>
+                </h:column>
+                <h:column>
+                  <f:facet name="header">Nama Pasien</f:facet>
+                  <h:outputText value="#{dokter.namaPasien}"></h:outputText>
+                </h:column>
+                
+            </h:dataTable>
+            <br></br>
+            <br></br>
+            </h:form>
+            <br></br>
+            <br></br>
+            <br></br>
+            <h:form>
+                Tambahkan Data Kedalam Table diatas &nbsp;
+                <h:commandButton value="Tambahkan" action="Tambah.xhtml"></h:commandButton>
+            </h:form>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+        </center>
+    </h:body>
+</html>
+
